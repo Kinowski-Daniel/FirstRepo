@@ -1,0 +1,29 @@
+// zadanie 2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+#include <iostream>
+using namespace std;
+void kwadrat(int a, int b) {
+	cout << "kwadrat" << endl;
+	cout << "pobwod" << endl;
+	cout << a * 4 << endl;
+}
+void trojkat_pk(int a, int b, int h) { 
+	cout << "trojkat_pk" << endl;
+	cout << "obwod" << endl;
+	int c = (a * a) + (b * b);
+	cout << a + b + sqrt(c) << endl;
+}
+void trapez_r(int a, int b, int h) { 
+	cout << "trapez_r" << endl;
+	cout << "obwod" << endl;
+	int c = (a * a) + (b * b);
+	cout << a + b + (sqrt(c) * 2) << endl;
+}
+
+int main()
+{
+	trapez_r(5, 2, 3);
+	trojkat_pk(3, 6, 9);
+		kwadrat(6, 2, 7);
+}
