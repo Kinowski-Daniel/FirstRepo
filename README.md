@@ -1,7 +1,7 @@
 # FirstRepo
----------------------------------------------
+
 // 30.09.21
--------------------------------------------------
+
 
 //zadanie 1
 #include <iostream>
@@ -29,8 +29,7 @@ int main()
 
 
 
-------------------------------------------------------------
-		// zadanie 2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+// zadanie 2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
 #include <iostream>
@@ -65,7 +64,7 @@ int main()
 	trojkat_pk(3, 6, 9);
 		kwadrat(6, 2, 7);
 }
-------------------------------------------------------------
+
  // katrkówka pierwsza.cpp  ocena 3 
 // zadeklaruj 1 wymiarową tablice o rozmiarze 10 niech za pomocą pętli wpisują sie wartości od 10 do 20 przy pomocy instrukcji warunkowej wyswietl wartości nieparzyste
 
