@@ -1,3 +1,30 @@
+// 30.09.21
+
+
+//zadanie 1
+#include <iostream>
+using namespace std;
+int dodawanie(int a, int b) {
+    return a + b;
+};
+int odejmowanie(int c, int d) {
+    return c - d;
+};
+int mnożenie(int e, int f) {
+    return e * f;
+};
+double dzielenie(double g, double h) {
+    return g / h;
+};
+int main()
+{
+    cout << dodawanie(4, 5) << endl;
+        cout << odejmowanie(6, 5) << endl;
+        cout << mnożenie(8, 9) << endl;
+        cout << dzielenie(3, 7) << endl; 
+       
+}
+---------------------------------------------------------------------------------------------------------
 // zadanie 2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
 //
 
@@ -27,3 +54,4 @@ int main()
 	trojkat_pk(3, 6, 9);
 		kwadrat(6, 2, 7);
 }
+-------------------------------------------------------------
