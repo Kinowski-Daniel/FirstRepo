@@ -28,3 +28,27 @@ int main()
 
 -----------------------------------------------------------------------
  //zadanie 2
+----------------------------------------------------------------------
+ // katrkówka pierwsza.cpp  ocena 3 
+// zadeklaruj 1 wymiarową tablice o rozmiarze 10 niech za pomocą pętli wpisują sie wartości od 10 do 20 przy pomocy instrukcji warunkowej wyswietl wartości nieparzyste
+
+#include <iostream>
+using namespace std;
+int main()
+{
+
+	int tab[10];
+
+	for (int x = 10; x <= 20; x++) {
+		cout << "podaj liczbe" << endl;
+		cin >> tab[x];
+
+	};
+
+
+	for (int x = 10; x <= 20; x++) {
+		if (tab[x] % 2 == 1) {
+			cout << tab[x];
+		}
+	};
+}
