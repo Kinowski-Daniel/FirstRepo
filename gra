@@ -1,0 +1,22 @@
+// gra.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+#include <ctime>
+using namespace std;
+
+
+
+int main() {
+	string liczba, gracz1, gracz2, gracz3, gracz4;
+	cout << "*****************Witaj w Bonestrike*****************" << endl;
+	cout << "*****************Podaj liczbe graczy min 2 max 5*****************" << endl;
+
+	cin >> liczba;
+
+
+
+	return 0;
+}
