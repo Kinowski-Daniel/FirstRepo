@@ -10,13 +10,134 @@ using namespace std;
 
 
 int main() {
-	string liczba, gracz1, gracz2, gracz3, gracz4;
-	cout << "*****************Witaj w Bonestrike*****************" << endl;
-	cout << "*****************Podaj liczbe graczy min 2 max 5*****************" << endl;
+    int liczba_graczy;
+    int runda;
+	string gracz1, gracz2, gracz3, gracz4, gracz5;
 
-	cin >> liczba;
+	
+
+cout <<  "*************Witaj w grze w kosci*************" << endl;
+cout <<  "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|" << endl;
+cout <<  "| Wybierz liczbe graczy:                      |" << endl;
+cout <<  "| 1. 2 graczy                                 |" << endl;
+cout <<  "| 2. 3 graczy                                 |" << endl;
+cout <<  "| 3. 4 graczy                                 |" << endl;
+cout <<  "| 4. 5 graczy                                 |" << endl;
+cout <<  "|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|" << endl;
+
+
+cout <<  "*************Podaj Liczbe Graczy*************" << endl;
+
+cin >> liczba_graczy;
+    
+    switch(liczba_graczy){
+	case 1:
+	
+
+cout <<  "*************Gra na Dwóch Graczy.*************" << endl;
 
 
 
+cout <<  "*************Gracz 1 Wprowadz Nick ***********" << endl;
+
+cin  >> gracz1;
+
+
+cout <<  "*************Gracz 2 Wprowadz Nick*************" << endl;
+
+cin >> gracz2;
+
+
+cout <<  "\nWitajcie Gracze: \n1." << gracz1 << "\n2." << gracz2 << endl;
+	
+	
+	
+//---------------------------------------------------------------------------------	
+case 2:
+	
+
+cout <<  "*************Gra na trzech Graczy.*************" << endl;
+
+
+
+cout <<  "*************Gracz 1 Wprowadz Nick ***********" << endl;
+
+cin  >> gracz1;
+
+
+cout <<  "*************Gracz 2 Wprowadz Nick*************" << endl;
+
+cin >> gracz2;
+
+cout <<  "*************Gracz 3 Wprowadz Nick*************" << endl;
+
+cin >> gracz3;
+
+
+cout <<  "\nWitajcie Gracze: \n1." << gracz1 << "\n2." << gracz2 << "\n3." << gracz3 << endl;
+
+//---------------------------------------------------------------------------------
+case 3:
+	
+
+cout <<  "*************Gra na czterech Graczy.*************" << endl;
+
+
+
+cout <<  "*************Gracz 1 Wprowadz Nick ***********" << endl;
+
+cin  >> gracz1;
+
+
+cout <<  "*************Gracz 2 Wprowadz Nick*************" << endl;
+
+cin >> gracz2;
+
+cout <<  "*************Gracz 3 Wprowadz Nick*************" << endl;
+
+cin >> gracz3;
+
+cout <<  "*************Gracz 4 Wprowadz Nick*************" << endl;
+
+cin >> gracz4;
+
+cout <<  "\nWitajcie Gracze: \n1." << gracz1 << "\n2." << gracz2 << "\n3." << gracz3 << "\n4." << gracz4 << endl;
+
+
+//---------------------------------------------------------------------------------
+case 4:
+	
+
+cout <<  "*************Gra na pięciu Graczy.*************" << endl;
+
+
+
+cout <<  "*************Gracz 1 Wprowadz Nick ***********" << endl;
+
+cin  >> gracz1;
+
+
+cout <<  "*************Gracz 2 Wprowadz Nick*************" << endl;
+
+cin >> gracz2;
+
+cout <<  "*************Gracz 3 Wprowadz Nick*************" << endl;
+
+cin >> gracz3;
+
+cout <<  "*************Gracz 4 Wprowadz Nick*************" << endl;
+
+cin >> gracz4;
+
+cout <<  "*************Gracz 5 Wprowadz Nick*************" << endl;
+
+cin >> gracz5;
+
+cout <<  "\nWitajcie Gracze: \n1." << gracz1 << "\n2." << gracz2 << "\n3." << gracz3 << "\n4." << gracz4 << "\n5." << gracz5 << endl;
+
+
+
+
+}
 	return 0;
 }
