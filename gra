@@ -141,3 +141,25 @@ cout <<  "\nWitajcie Gracze: \n1." << gracz1 << "\n2." << gracz2 << "\n3." << gr
 }
 	return 0;
 }
+
+// RPGuwu.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+#include <iostream>
+#include<math.h>
+
+struct klasa Pingxo { // mag 
+	int hp = 720; //zdrowie
+	int mana = 420;
+	int dmg = 45; // podstawowe obrażenia
+};
+
+struct klasa Antra { // zabójca
+	int hp = 470;
+	int energia = 250;
+	int dmg = 120;
+};
+int main()
+{
+}
+	
