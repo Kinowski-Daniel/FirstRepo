@@ -1,0 +1,165 @@
+// RPGuwu.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+440 lines(426 sloc)  11.3 KB
+
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <windows.h>
+#include <stdlib.h>
+#include <time.h>
+
+int atkpp;
+int atak_P, atak_W;
+using namespace std;
+int los_atak() {
+	srand(time(NULL));
+	atkpp = rand() % 4 + 1;
+	return atkpp;
+};
+
+
+
+struct statystyki_P {
+	int hp;
+	int dmg;
+	int def;
+	int mana;
+	int atk_speed;
+	
+	int fireball(){
+    cout << "fireball" << endl;
+    return (dmg*0.004* atk_speed);
+}
+int uderzenie(){
+    cout << "Uderzenie" << endl;
+    return ((0.6* atk_speed *dmg)*0.044);
+}
+int heal(){
+    atkpp = 0;
+    cout << "leczenie" ;
+    atkpp = hp+0.015*lvl;
+    cout << " = " << atkpp << endl;
+    return atkpp;
+}
+int wzmocnienie(){
+    cout << "Wzmacniam" << endl;
+    return (0.020*lvl*def);
+};
+int tarcza() {
+	cout << "Blok" << endl;
+	return (0.06 * lvl * def);
+};
+struct statystyki_W {
+	int hp;
+	int dmg;
+	int def;
+	int mana;
+
+	int Bite() {
+		cout << "Chomp Chomp" << endl;
+		return (dmg * 0.004 * lvl);
+	}
+	int rock_throw() {
+		cout << "" << endl;
+		return (hp + 0.003 * lvl * def);
+	}
+	int spear_throw() {
+		cout << "Ziuuuuu" << endl;
+		return (0.4 * lvl);
+	}
+	int miss() {
+		cout << "miss" << endl;
+		return 0;
+	}
+
+};
+
+statystyki_P gracz;
+
+statystyki_P assasin = {
+	250,
+	65,
+	10,
+};
+statystyki_P tank = {
+	350,
+	35,
+	50,
+};
+statystyki_P mag = {
+	200,
+	50,
+	10,
+	200,
+};
+
+statystyki_W;
+
+statystyki_W goblin = {
+	150,
+	40,
+	25,
+};
+
+statystyki_W Skalniak = {
+	270,
+	20,
+	30,
+};
+
+statystyki_W Wilki = {
+	200,
+	45,
+	25,
+};
+
+void champion_select() {
+	int wybor = 0;
+	cout << "------------------------------" << endl;
+	cout << "1= assasin | 2= tank | 3= mag";
+	cout << "------------------------------" << endl;
+	cout << "\nwybiez postac 1,2,3 = "; cin >> wybor;
+	cout << "------------------------------" << endl;
+	switch (wybor)
+	{
+	case 1:
+		gracz = assasin;
+		break;
+	case 2:
+		gracz = tank;
+		break;
+	case 3:
+		gracz = mag;
+		break;
+	default:
+		cout << "\n error\n";
+		champion_select();
+		break;
+	}
+}
+
+void ataki_mag() {
+		int wybor;
+		cout << "\n Atakuj! 0,1,2,3 = ";
+		atak_W = 0; atak_P = 0;
+		cin >> wybor;
+		switch (wybor)
+		{
+		default: 
+			atak_p = gracz.fireball();  break;
+		case 1:
+			gracz.hp = gracz.heal();  break;
+		case 2:
+			gracz.def = gracz.wzmocnienie(); break;
+		};
+}
+
+	
+
+
+int main()
+{
+	champion_select();
+}
