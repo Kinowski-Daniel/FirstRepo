@@ -1,0 +1,478 @@
+// RPGuwu.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <windows.h>
+#include <stdlib.h>
+#include <time.h>
+int lvl = 1;
+int atkpp;
+int atak_P, atak_W;
+int i;
+int d = 0;
+using namespace std;
+
+int los_atak() {
+	atkpp = rand() % 10 + 1;
+	return atkpp;
+};
+
+
+
+struct statystyki_P {
+	int hp;
+	int dmg;
+	int def;
+	int mana;
+	string nazwa_p;
+
+	int fireball(){
+    cout << "fireball" << endl;
+    return (dmg*0.7);
+}
+int uderzenie(){
+    cout << "Uderzenie" << endl;
+    return ((0.6 * dmg)*0.4);
+}
+int kop(){
+    cout << "ch-ia" << endl;
+    return ( dmg * 0.3 );
+}
+int zadrapanie(){
+    cout << "traaa" << endl;
+    return ((0.6 * dmg)*0.8);
+}
+int laser(){
+    cout << "dzzzzzzzz" << endl;
+    return (hp *0.4);
+}
+int kula_s(){
+    cout << "blask" << endl;
+    return (0.6 * dmg);
+}
+int krzyk(){
+    cout << "shees" << endl;
+    return ((0.6 * dmg)*0.4);
+}
+int szarpanie(){
+    cout << "rururur" << endl;
+    return ( dmg *1.4);
+}
+int gryzienie(){
+    cout << "hap hap" << endl;
+    return ((0.8 * dmg)*0.4);
+}
+int spiew(){
+    cout << "JOOOOOŁ" << endl;
+    return ((0.6 * dmg)*0.4);
+}
+int tupniecie(){
+    cout << "tup tup" << endl;
+    return (dmg * 0.2);
+}
+};
+
+struct statystyki_W {
+	int hp;
+	int dmg;
+	int def;
+	string nazwa_w;
+
+	int Bite() {
+		cout << "Chomp Chomp" << endl;
+		return (dmg * 0.4 * lvl);
+	}
+	int rock_throw() {
+		cout << "look out" << endl;
+		return (hp * 0.3 * lvl + def);
+	}
+	int spear_throw() {
+		cout << "Sruu" << endl;
+		return (0.4 * dmg);
+	}
+		int rar() {
+		cout << "rar" << endl;
+		return (0.6 * dmg);
+		}
+			int boop() {
+		cout << "boop" << endl;
+		return (1.2 * dmg);
+		}	
+			int kys() {
+		cout << "kys" << endl;
+		return (0.4 * dmg);
+		}	
+			int krzyk() {
+		cout << "AAAAAAAAAAA" << endl;
+		return (0.4 * dmg);
+		}	
+			int ziuu() {
+		cout << "Ziuuuuu" << endl;
+		return (0.7 * dmg);
+		}	
+			int boom() {
+		cout << "Boom" << endl;
+		return (dmg * 0.5);
+		}	
+			int jo_mama() {
+		cout << "Jo mama" << endl;
+		return ((0.9 * dmg)* def);
+}
+
+};
+
+statystyki_P gracz;
+
+statystyki_P assasin = {
+	250,
+	65,
+	10,
+};
+statystyki_P tank = {
+	350,
+	35,
+	50,
+};
+statystyki_P mag = {
+	200,
+	50,
+	10,
+	200,
+};
+
+statystyki_P wojownik  = {
+    300,
+    40,
+    15,
+};
+statystyki_P palladyn = {
+    250,
+    55,
+    10,
+    200,
+};
+
+statystyki_P brusier = {
+	325,
+	45,
+	13,
+};
+
+statystyki_P  czarodziej = {
+	200,
+	50,
+	10,
+	278,
+};
+
+statystyki_P   monstrum = {
+	325,
+	45,
+	13,
+};
+
+statystyki_P   szczur = {
+	315,
+	45,
+	17,
+};
+
+statystyki_P  unicorn ={
+	276,
+	67,
+	10,
+
+};
+
+
+
+
+
+statystyki_W wrog;
+statystyki_W goblin = {
+	150,
+	40,
+	25,
+	"goblin",
+};
+
+statystyki_W Skalniak = {
+	250,
+	20,
+	15,
+	"skalniak",
+};
+
+statystyki_W Wilki = {
+	200,
+	45,
+	25,
+	"Wilk",
+};
+statystyki_W kaczka = {
+	100,
+	5,
+	0,
+	"kaczka",
+};
+statystyki_W red = {
+	200,
+	35,
+	15,
+	"red",
+};
+statystyki_W blue = {
+	200,
+	35,
+	15,
+	"blue",
+};
+statystyki_W zaba = {
+	150,
+	38,
+	17,
+	"zaba",
+};
+statystyki_W golem = {
+	250,
+	20,
+	15,
+	"golem",
+};
+statystyki_W m_smok = {
+	400,
+	57,
+	35,
+	"Maly smok",
+};
+statystyki_W duch = {
+	159,
+	36,
+	1,
+	"duch",
+};
+
+void champion_select() {
+	int wybor = 0;
+	cout << "--------------------------------------------------------------------------------------------------------------------------------------" << endl;
+	cout << "1= assasin | 2= tank | 3= mag | 4 = wojownik | 5 = brusier | 6 = palladyn | 7 - czarodziej | 8 - monstrum | 9 - szczur | 10 - unicorn" << endl;
+	cout << "--------------------------------------------------------------------------------------------------------------------------------------" << endl;
+	cout << "\nwybiez postac 1,2,3,4,5,6,7,8,9,10 = "; cin >> wybor;
+	cout << "--------------------------------------------------------------------------------------------------------------------------------------" << endl;
+switch (wybor)
+	{
+	case 1:
+		gracz = assasin;
+
+		break;
+	case 2:
+		gracz = tank;
+		break;
+	case 3:
+		gracz = mag;
+		break;
+	case 4:
+		gracz = wojownik;
+		break;
+	case 5:
+		gracz = brusier;
+		break;
+	case 6:
+		gracz = palladyn;
+		break;
+	case 7:
+		gracz = czarodziej;
+		break;
+
+	case 8:
+		gracz = monstrum;
+		break;
+
+		case 9:
+		gracz = szczur;
+		break;
+
+		case 10:
+		gracz = unicorn;
+		break;
+
+		default:
+		cout << "\n error\n"; 
+		champion_select();
+ 
+	}
+}
+
+void poziom() {
+    srand(time(NULL));
+    int los = los_atak();
+ cout << " poziom  " << i << endl;
+
+switch (los)
+	{
+	case 1:
+		wrog = Skalniak;
+        cout << "walczysz przeciwko Skalniakowi " << endl;
+		break;
+	case 2:
+		wrog = goblin;
+        cout << "walczysz przeciwko Goblinowi " << endl;
+		break;
+	case 3:
+		wrog = Wilki;
+        cout << "walczysz przeciwko Wilkowi " << endl;
+		break;
+		case 4:
+		wrog = kaczka;
+        cout << "walczysz przeciwko kaczce " << endl;
+		break;
+		case 5:
+		wrog = red;
+        cout << "walczysz przeciwko redowi " << endl;
+		break;
+		case 6:
+		wrog = blue;
+        cout << "walczysz przeciwko blue " << endl;
+		break;
+		case 7:
+		wrog = zaba;
+        cout << "walczysz przeciwko zabie " << endl;
+		break;
+		case 8:
+		wrog = golem;
+        cout << "walczysz przeciwko golemowi " << endl;
+		break;
+		case 9:
+		wrog = m_smok;
+        cout << "walczysz przeciwko małemu smokowi " << endl;
+		break;
+		case 10:
+		wrog = duch;
+        cout << "walczysz przeciwko duchowi " << endl;
+		break;
+	
+	default:
+		cout << "\n error\n"; 
+ 
+}
+}
+
+void enemy_atk(){
+ srand(time(NULL));
+int kk = rand() % 3 + 1;
+switch(kk){
+	case 1:
+		atak_W = wrog.Bite();
+		break;
+	case 2:
+		atak_W = wrog.rock_throw();
+		break;
+	case 3:
+		atak_W = wrog.spear_throw();
+		break;
+
+}
+}
+void ataki_mag() {
+		int wybor;
+		cout << "\n Atakuj! 0 - fireball ,1 - uderzenie ,2 - kop ,3 - zadrapanie ,4 - laser ,5 - kula swiatla ,6 - krzyk ,7 - szarpanie ,8 - gryzienie ,9 - spiew ,10 - tupniecie  " << endl;
+		atak_W = 0; atak_P = 0;
+		cin >> wybor;
+		switch (wybor)
+		{
+		default: 
+			atak_P  = gracz.fireball();  
+			break;
+		case 1:
+			atak_P = gracz.uderzenie();  
+			break;
+		case 2:
+			atak_P = gracz.kop(); 
+		break;
+				case 3:
+			atak_P = gracz.zadrapanie(); 
+		break;
+				case 4:
+			atak_P = gracz.laser(); 
+		break;
+				case 5:
+			atak_P = gracz.kula_s(); 
+		break;
+				case 6:
+			atak_P = gracz.krzyk(); 
+		break;
+				case 7:
+			atak_P = gracz.szarpanie(); 
+		break;
+				case 8:
+			atak_P = gracz.gryzienie(); 
+		break;
+				case 9:
+			atak_P = gracz.spiew(); 
+		break;
+				case 10:
+			atak_P = gracz.tupniecie(); 
+
+
+		};
+}
+
+void twoj() {
+	cout << "twoj ruch" << endl;
+	ataki_mag();
+	cout << "zadales " << atak_P << " obrazen" << endl;
+	wrog.hp = wrog.hp - atak_P;
+	cout << wrog.nazwa_w <<"owi zostalo " << wrog.hp  <<" hp" << endl;
+	if(wrog.hp <= 0){
+		d = 1;
+		cout << "gracz wygrał poziom" << i << endl; 
+		
+	}
+}
+
+void enemy(){
+	cout << "ruch " << wrog.nazwa_w << "a" << endl;
+	enemy_atk();
+	cout << wrog.nazwa_w <<  " zadal " << atak_W << " obrazen" << endl;
+	gracz.hp = gracz.hp - atak_W;
+	cout << " zostalo ci  " << gracz.hp <<" hp" << endl;
+}
+
+
+int main()
+{
+	champion_select();
+	int zd = gracz.hp;
+	for(i = 1; i <= 5; i++){
+	gracz.hp = zd;
+	d = 0;
+	poziom();
+	do{
+	twoj();
+	cout << endl;
+	if(wrog.hp >= 0){
+	enemy();
+	}
+	if(gracz.hp <= 0){
+	int r;
+	cout << "game over" << endl;
+	cout << " chcesz grac jescze raz 1 - tak   2 - nie" << endl;
+	cin >> r;
+	switch(r){
+	case 1:
+	main();
+	case 2:
+	exit (EXIT_FAILURE);
+		}
+	}
+	}while(d == 0);
+
+}
+}
+	
+
+	
+
+
