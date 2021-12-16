@@ -256,6 +256,7 @@ statystyki_W duch = {
 
 void champion_select() {
 	int wybor = 0;
+	int nazwa;
 	cout << "--------------------------------------------------------------------------------------------------------------------------------------" << endl;
 	cout << "1= assasin | 2= tank | 3= mag | 4 = wojownik | 5 = brusier | 6 = palladyn | 7 - czarodziej | 8 - monstrum | 9 - szczur | 10 - unicorn" << endl;
 	cout << "--------------------------------------------------------------------------------------------------------------------------------------" << endl;
@@ -299,8 +300,13 @@ switch (wybor)
 		break;
 
 		default:
-		cout << "\n error\n"; 
-		champion_select();
+	if (wybor > 1 && wybor < 10)
+      cout <<   endl;
+
+    else
+    {
+     champion_select();
+    }
  
 	}
 }
