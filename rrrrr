@@ -1,0 +1,51 @@
+// ConsoleApplication2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <windows.h>
+#include <stdlib.h>
+#include <time.h>  
+using namespace std;
+
+/*struct P
+{
+	String imię;
+};*/
+void menu() {
+	int wybor;
+	int x;
+	cout << "|--------------------------------------------| " << endl;
+	cout << "|        1.podaj ilosc pracownikow           | " << endl;
+	cout << "|        2.Wyswietl pracownikow              | " << endl;
+	cout << "|        3.Usun Pracownika                   | " << endl;
+	cout << "|        4.Edyuj Pracownika                  | " << endl;
+	cout << "|--------------------------------------------| " << endl;
+	cin >> wybor;
+	switch (wybor) {
+	case 1:
+		cout << " wpisz liczbe pracownikow" << endl;
+		cin >> x;
+		break;
+	case 2:
+		cout << " wyswietlanie pracownikow " << endl;
+		break;
+	case 3:
+		cout <<"" << endl; /*coś*/
+		break;
+	case 4:
+		cout <<"" << endl; /*coś 2*/
+		break;
+	default:
+		cout << "error" << endl;
+			break;
+	}
+
+}
+
+int main()
+{
+	menu();
+}
+
